@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+.test {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("../assets/images/2012_06_14_EatingRightforBloodDonation_0.jpg" );
+    
+    /* Full height */
+    height: 100%;  
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.margin-tb-20-10 {
+ position: absolute;
+bottom:   100px;
+left:43%
+}

@@ -130,6 +130,9 @@ config.module.rules.push({
             inProjectSrc('styles'),
           ],
         },
+      },
+      {
+        loader:'resolve-url-loader'
       }
     ],
   })

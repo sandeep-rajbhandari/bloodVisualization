@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import createStore from './store/createStore'
 import './styles/main.scss'
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 // Store Initialization
 // ------------------------------------
@@ -10,11 +11,11 @@ const store = createStore(window.__INITIAL_STATE__)
 // Render Setup
 // ------------------------------------
 const MOUNT_NODE = document.getElementById('root')
+injectTapEventPlugin();
 
 let render = () => {
   const App = require('./components/App').default
   const routes = require('./routes/index').default(store)
-
   ReactDOM.render(
     <App store={store} routes={routes} />,
     MOUNT_NODE
@@ -46,10 +47,10 @@ if (__DEV__) {
       './components/App',
       './routes/index',
     ], () =>
-      setImmediate(() => {
-        ReactDOM.unmountComponentAtNode(MOUNT_NODE)
-        render()
-      })
+        setImmediate(() => {
+          ReactDOM.unmountComponentAtNode(MOUNT_NODE)
+          render()
+        })
     )
   }
 }

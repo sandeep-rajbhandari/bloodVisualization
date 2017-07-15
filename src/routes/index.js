@@ -1,5 +1,5 @@
 // We only need to import the modules necessary for initial render
-import LoginLayout from '../layouts/PageLayout/login';
+import LoginLayout from './Login';
 import Home from './Home'
 import CounterRoute from './Counter'
 
@@ -8,7 +8,7 @@ import CounterRoute from './Counter'
 
 export const createRoutes = (store) => ({
   path        : '/',
-  component   : LoginLayout
+  component   : LoginLayout.component
 })
 
 /*  Note: childRoutes can be chunked or otherwise loaded programmatically
